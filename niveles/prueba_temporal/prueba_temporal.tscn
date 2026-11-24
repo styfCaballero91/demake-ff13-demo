@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bejefarjg6hc2"]
+
+[ext_resource type="PackedScene" uid="uid://dfib1v64ewo4a" path="res://actores/jugador/jugador.tscn" id="1_ykca0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
+size = Vector2(32, 32)
+
+[node name="PruebaTemporal" type="Node2D" unique_id=735946377]
+
+[node name="SueloReferencia" type="ColorRect" parent="." unique_id=1974895751]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.18039216, 0.36862746, 0.24313726, 1)
+
+[node name="MarcadorReferencia" type="ColorRect" parent="." unique_id=1402674039]
+offset_left = 480.0
+offset_top = 120.0
+offset_right = 512.0
+offset_bottom = 152.0
+color = Color(0.8509804, 0.3254902, 0.30980393, 1)
+
+[node name="Jugador" parent="." unique_id=879637461 instance=ExtResource("1_ykca0")]
+position = Vector2(320, 180)
+
+[node name="Obstáculo" type="StaticBody2D" parent="." unique_id=749477273]
+position = Vector2(400, 196)
+
+[node name="FormaColision" type="CollisionShape2D" parent="Obstáculo" unique_id=2011070028]
+shape = SubResource("RectangleShape2D_abpqg")
+
+[node name="MarcadorVisual" type="ColorRect" parent="Obstáculo" unique_id=1114273692]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0.5411765, 0.5411765, 0.5411765, 1)

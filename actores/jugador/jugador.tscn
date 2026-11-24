@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dfib1v64ewo4a"]
+
+[ext_resource type="Script" uid="uid://dl013fwo14lnm" path="res://actores/jugador/jugador.gd" id="1_taipi"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_abpqg"]
+size = Vector2(32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
+size = Vector2(24, 16)
+
+[node name="Jugador" type="CharacterBody2D" unique_id=879637461]
+motion_mode = 1
+script = ExtResource("1_taipi")
+
+[node name="MarcadorVisual" type="Sprite2D" parent="." unique_id=1070536493]
+texture = SubResource("PlaceholderTexture2D_abpqg")
+
+[node name="FormaColision" type="CollisionShape2D" parent="." unique_id=1416432763]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_abpqg")
+
+[node name="Camara" type="Camera2D" parent="." unique_id=1689656256]
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+position_smoothing_enabled = true
