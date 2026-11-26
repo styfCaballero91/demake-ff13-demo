@@ -38,6 +38,7 @@ Solo teclado.
 | Acción | Teclas |
 |---|---|
 | Moverse | W, A, S, D o flechas |
+| Interactuar | Espacio |
 
 ## Cómo ejecutar el proyecto
 
@@ -57,8 +58,8 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 
 - [x] 1. Fundamentos y preparación
 - [x] 2. Personaje, movimiento y cámara
-- [x] 3. Pasillo cortado en 2 y seguidor (en curso)
-- [ ] 4. Interacción base y estado global
+- [x] 3. Pasillo cortado en 2 y seguidor
+- [x] 4. Interacción base y estado global
 - [ ] 5. Objetos interactivos
 - [ ] 6. Datos del personaje y guardado
 - [ ] 7. Interfaz
@@ -72,6 +73,7 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 
 ## Versiones
 
+- **V.0.6:** estado global (inventario y banderas) e interacción con objetos mediante la tecla Espacio.
 - **V.0.5:** pruebas finales del pasillo de prueba y del seguidor, y corrección de errores del TileSet.
 - **V.0.4:** personaje seguidor que recorre el camino del jugador y no se bloquea con él.
 - **V.0.3:** pasillo de prueba en 2 mitades con tiles, colisiones y obstáculos.
@@ -144,8 +146,17 @@ demake-final-fantasy-xiii-demo/
 | 1 | Mundo (paredes y obstáculos) |
 | 2 | Jugador |
 | 3 | Seguidor |
+| 4 | Objetos interactivos |
 
 El jugador y el seguidor solo detectan la capa 1, por lo que no se bloquean entre sí.
+La zona de interacción del jugador solo detecta la capa 4.
+
+### Estado global e interacción
+
+- `EstadoGlobal` (Autoload en `autoload/estado_global.gd`): guarda el inventario y las banderas del juego.
+- `ZonaInteraccion` (hijo del Jugador): área de 32 × 32 px frente al personaje que detecta los objetos interactivos.
+- `Interactable` (`interactuables/interactuable.gd`): script base de los objetos interactivos.
+- Acción del Mapa de entrada (Input Map): `interactuar` (Espacio).
 
 ## Convenciones
 

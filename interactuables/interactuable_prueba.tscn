@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b4gvs5dwh6y12"]
+
+[sub_resource type="GDScript" id="GDScript_ebi5e"]
+script/source = "extends Interactable
+
+func interact() -> void:
+	EstadoGlobal.set_flag(\"prueba_interactuable\")
+	print(\"Interaction done\")
+"
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_abpqg"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
+size = Vector2(32, 32)
+
+[node name="InteractuablePrueba" type="Area2D" unique_id=1703973887]
+collision_layer = 8
+collision_mask = 0
+script = SubResource("GDScript_ebi5e")
+
+[node name="MarcadorVisual" type="Sprite2D" parent="." unique_id=1464585486]
+texture = SubResource("PlaceholderTexture2D_abpqg")
+
+[node name="FormaColision" type="CollisionShape2D" parent="." unique_id=1107869166]
+shape = SubResource("RectangleShape2D_abpqg")

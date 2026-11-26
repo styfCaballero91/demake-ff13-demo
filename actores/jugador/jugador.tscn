@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://dfib1v64ewo4a"]
 
 [ext_resource type="Script" uid="uid://dl013fwo14lnm" path="res://actores/jugador/jugador.gd" id="1_taipi"]
+[ext_resource type="Script" uid="uid://l3ge2togor7e" path="res://actores/jugador/zona_interaccion.gd" id="2_pg1ye"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_abpqg"]
 size = Vector2(32, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
 size = Vector2(24, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vd5s2"]
+size = Vector2(32, 32)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=879637461]
 collision_layer = 2
@@ -26,3 +30,11 @@ limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 position_smoothing_enabled = true
+
+[node name="ZonaInteraccion" type="Area2D" parent="." unique_id=1624080634]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("2_pg1ye")
+
+[node name="FormaColision" type="CollisionShape2D" parent="ZonaInteraccion" unique_id=244157142]
+shape = SubResource("RectangleShape2D_vd5s2")
