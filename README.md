@@ -57,7 +57,7 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 
 - [x] 1. Fundamentos y preparación
 - [x] 2. Personaje, movimiento y cámara
-- [ ] 3. Pasillo cortado en 2 y seguidor (en curso)
+- [x] 3. Pasillo cortado en 2 y seguidor (en curso)
 - [ ] 4. Interacción base y estado global
 - [ ] 5. Objetos interactivos
 - [ ] 6. Datos del personaje y guardado
@@ -72,6 +72,7 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 
 ## Versiones
 
+- **V.0.5:** pruebas finales del pasillo de prueba y del seguidor, y corrección de errores del TileSet.
 - **V.0.4:** personaje seguidor que recorre el camino del jugador y no se bloquea con él.
 - **V.0.3:** pasillo de prueba en 2 mitades con tiles, colisiones y obstáculos.
 - **V.0.2:** máquina de estados básica del jugador.
