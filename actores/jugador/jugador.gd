@@ -11,7 +11,7 @@ var facing_direction: Vector2 = Vector2.DOWN
 
 # Estado actual del personaje
 var current_state: State = State.IDLE
-
+		
 func _physics_process(_delta: float) -> void:
 	# Lee la dirección desde las acciones de movimiento
 	var direction: Vector2 = Input.get_vector("mover_izquierda", "mover_derecha", "mover_arriba", "mover_abajo")

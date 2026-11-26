@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" format=3 uid="uid://dakvsm0tsb5ji"]
+
+[ext_resource type="Texture2D" uid="uid://dp1ihs7cn4glo" path="res://activos/tile_suelo.png" id="1_liksh"]
+[ext_resource type="Texture2D" uid="uid://c5rlpq6uy4niv" path="res://activos/tile_pared.png" id="2_sqytu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c5cwl"]
+texture = ExtResource("1_liksh")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u6ejx"]
+texture = ExtResource("2_sqytu")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/angular_velocity = 1.545
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_c5cwl")
+sources/1 = SubResource("TileSetAtlasSource_u6ejx")
