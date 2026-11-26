@@ -9,6 +9,7 @@ size = Vector2(32, 48)
 size = Vector2(24, 16)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=879637461]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_taipi")
 

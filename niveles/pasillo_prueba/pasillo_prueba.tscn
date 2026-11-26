@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dfib1v64ewo4a" path="res://actores/jugador/jugador.tscn" id="1_jhrqs"]
 [ext_resource type="TileSet" uid="uid://dakvsm0tsb5ji" path="res://niveles/pasillo_prueba/conjunto_tiles_pasillo.tres" id="2_b3ivy"]
+[ext_resource type="PackedScene" uid="uid://o0sw3op6vwft" path="res://actores/seguidor/seguidor.tscn" id="3_1hahj"]
 
 [node name="PasilloPrueba" type="Node2D" unique_id=965386833]
 
@@ -15,5 +16,9 @@ position = Vector2(48, 192)
 [node name="Camara" parent="Jugador" index="2" unique_id=1689656256]
 limit_right = 1984
 limit_bottom = 448
+
+[node name="Seguidor" parent="." unique_id=432152677 node_paths=PackedStringArray("target") instance=ExtResource("3_1hahj")]
+position = Vector2(48, 256)
+target = NodePath("../Jugador")
 
 [editable path="Jugador"]

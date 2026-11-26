@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://o0sw3op6vwft"]
+
+[ext_resource type="Script" uid="uid://basw2s321dwv4" path="res://actores/seguidor/seguidor.gd" id="1_p45sy"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vd5s2"]
+size = Vector2(32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
+size = Vector2(24, 16)
+
+[node name="Seguidor" type="CharacterBody2D" unique_id=432152677]
+collision_layer = 4
+motion_mode = 1
+script = ExtResource("1_p45sy")
+
+[node name="MarcadorVisual" type="Sprite2D" parent="." unique_id=444332124]
+modulate = Color(0, 0, 1, 1)
+texture = SubResource("PlaceholderTexture2D_vd5s2")
+
+[node name="FormaColision" type="CollisionShape2D" parent="." unique_id=1904751919]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_abpqg")
