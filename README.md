@@ -60,7 +60,7 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 - [x] 2. Personaje, movimiento y cámara
 - [x] 3. Pasillo cortado en 2 y seguidor
 - [x] 4. Interacción base y estado global
-- [ ] 5. Objetos interactivos
+- [ ] 5. Objetos interactivos (en curso)
 - [ ] 6. Datos del personaje y guardado
 - [ ] 7. Interfaz
 - [ ] 8. Sucesos en segundo plano
@@ -73,6 +73,7 @@ Requisito: [Godot](https://godotengine.org/) 4.7.2.
 
 ## Versiones
 
+- **V.0.7:** esferas con objeto que se agregan al inventario con Espacio y no se pueden recoger dos veces.
 - **V.0.6:** estado global (inventario y banderas) e interacción con objetos mediante la tecla Espacio.
 - **V.0.5:** pruebas finales del pasillo de prueba y del seguidor, y corrección de errores del TileSet.
 - **V.0.4:** personaje seguidor que recorre el camino del jugador y no se bloquea con él.

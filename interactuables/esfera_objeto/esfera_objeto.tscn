@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cbculph0h3jwp"]
+
+[ext_resource type="Script" uid="uid://cxmfo6kd0wwb" path="res://interactuables/esfera_objeto/esfera_objeto.gd" id="1_fj804"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abpqg"]
+size = Vector2(24, 24)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_abpqg"]
+size = Vector2(24, 24)
+
+[node name="EsferaObjeto" type="Area2D" unique_id=1831552180]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_fj804")
+
+[node name="FormaColision" type="CollisionShape2D" parent="." unique_id=696651408]
+shape = SubResource("RectangleShape2D_abpqg")
+
+[node name="MarcadorVisual" type="Sprite2D" parent="." unique_id=1279813626]
+modulate = Color(1, 1, 0, 1)
+texture = SubResource("PlaceholderTexture2D_abpqg")
